@@ -15,8 +15,10 @@ namespace highfieldtest.Controllers
         {
             ResponseDtoViewModel responseDto = new ResponseDtoViewModel();
             responseDto.users = GetUsers();
-            responseDto.colours = GetColours(responseDto.users);
-            responseDto.ages = GetAges(responseDto.users);
+            //going to be multiple enumerations so using an array 
+            var responseDtoUsers = responseDto.users as UserViewModel[] ?? responseDto.users.ToArray();
+            responseDto.colours = GetColours(responseDtoUsers);
+            responseDto.ages = GetAges(responseDtoUsers);
             return View(responseDto);
         }
 
@@ -26,9 +28,9 @@ namespace highfieldtest.Controllers
             foreach (var user in responseDtoUsers)
             {
                 AgePlusTwentyDtoViewModel userToAdd = new AgePlusTwentyDtoViewModel();
-                userToAdd.userId = user.Id;
-                userToAdd.originalAge = CalculateAge(user.DateOfBirth);
-                userToAdd.agePlusTwenty = CalculateAgePlusTwenty(userToAdd.originalAge);
+                userToAdd.UserId = user.Id;
+                userToAdd.OriginalAge = CalculateAge(user.DateOfBirth);
+                userToAdd.AgePlusTwenty = CalculateAgePlusTwenty(userToAdd.OriginalAge);
                 ages.Add(userToAdd);
             }
 

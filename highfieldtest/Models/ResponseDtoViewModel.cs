@@ -4,10 +4,10 @@ namespace highfieldtest.Models
 {
     public class ResponseDtoViewModel
     {
-        public IEnumerable<UserViewModel> users;
+        public IEnumerable<UserViewModel> Users;
 
-        public System.Collections.Generic.IList<AgePlusTwentyDtoViewModel> ages;
+        public System.Collections.Generic.IList<AgePlusTwentyDtoViewModel> Ages;
 
-        public IDictionary<string, int> colours;
+        public IDictionary<string, int> Colours;
     }
 }

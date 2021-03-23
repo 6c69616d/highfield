@@ -7,11 +7,11 @@ namespace highfieldtest.Models
 {
     public class AgePlusTwentyDtoViewModel
     {
-        public string userId { get; set; }
+        public string UserId { get; set; }
 
-        public int originalAge { get; set; }
+        public int OriginalAge { get; set; }
 
-        public int agePlusTwenty { get; set; }
+        public int AgePlusTwenty { get; set; }
 
     }
 }
