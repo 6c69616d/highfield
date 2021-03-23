@@ -19,6 +19,8 @@ I also appreciate that although I create the topcoloursdtoviewmodel it is never 
 
 I have tried to demonstrate some of the techniques we discussed in the call on Monday i.e. Linq.
 
+I tried to demonstrate some basic conventional commits and I probably should of demonstrated a better use of git from the start.
+
 Please accept my apologies for how what I have produced may not be up to scratch the anxiety completing the task most certainly got the better of me.
 
 I look forward to hearing from you soon.
