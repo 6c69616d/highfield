@@ -14,11 +14,11 @@ namespace highfieldtest.Controllers
         public ActionResult Index()
         {
             ResponseDtoViewModel responseDto = new ResponseDtoViewModel();
-            responseDto.users = GetUsers();
+            responseDto.Users = GetUsers();
             //going to be multiple enumerations so using an array 
-            var responseDtoUsers = responseDto.users as UserViewModel[] ?? responseDto.users.ToArray();
-            responseDto.colours = GetColours(responseDtoUsers);
-            responseDto.ages = GetAges(responseDtoUsers);
+            var responseDtoUsers = responseDto.Users as UserViewModel[] ?? responseDto.Users.ToArray();
+            responseDto.Colours = GetColours(responseDtoUsers);
+            responseDto.Ages = GetAges(responseDtoUsers);
             return View(responseDto);
         }
 
