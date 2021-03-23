@@ -20,6 +20,5 @@ namespace highfieldtest.Models
 
         public string FavouriteColour { get; set; }
 
-        public AgePlusTwentyDtoViewModel AgePlus { get; set; }
     }
 }

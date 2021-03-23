@@ -138,12 +138,14 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AgePlusTwentyDTOController.cs" />
+    <Compile Include="Controllers\ResponseDtoController.cs" />
     <Compile Include="Controllers\TopColoursDtoController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AgePlusTwentyDtoViewModel.cs" />
+    <Compile Include="Models\ResponseDtoViewModel.cs" />
     <Compile Include="Models\TopColoursDtoViewModel.cs" />
     <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -164,6 +166,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\AgePlusTwentyDTO\" />
+    <Folder Include="Views\ResponseDto\" />
     <Folder Include="Views\TopColoursDto\" />
   </ItemGroup>
   <PropertyGroup>

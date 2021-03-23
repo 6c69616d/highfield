@@ -1,39 +1,64 @@
-﻿@model IEnumerable<highfieldtest.Models.UserViewModel>
+﻿@model IEnumerable<highfieldtest.Models.ResponseDtoViewModel>
 
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Highfield Test";
 }
 
-<h2>Users with their age and their age plus twenty</h2>
+<h2>Favourite Colours and their quantities</h2>
 
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Id)
+            User Identifier
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AgePlus.originalAge)
+            Original Age
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AgePlus.agePlusTwenty)
+            Age Plus Twenty 
         </th>
-        <th></th>
     </tr>
 
-    @foreach (var item in Model)
+    @foreach (var item in Model.GetEnumerator().Current.ages)
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
+                @Html.DisplayFor(modelItem => item.userId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AgePlus.originalAge)
+                @Html.DisplayFor(modelItem => item.originalAge)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AgePlus.agePlusTwenty)
+                @Html.DisplayFor(modelItem => item.agePlusTwenty)
             </td>
-     </tr>
+        </tr>
+    }
+
+</table>
+
+<h2>Users, their ages and their ages plus twenty</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Colour
+        </th>
+        <th>
+            Quantity of the Colour
+        </th>
+    </tr>
+
+    @foreach (var item in Model.GetEnumerator().Current.colours)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Key)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Value)
+            </td>
+        </tr>
     }
 
 </table>
