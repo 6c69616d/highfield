@@ -1,0 +1,39 @@
+﻿@model IEnumerable<highfieldtest.Models.UserViewModel>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Users with their age and their age plus twenty</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AgePlus.originalAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AgePlus.agePlusTwenty)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgePlus.originalAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgePlus.agePlusTwenty)
+            </td>
+     </tr>
+    }
+
+</table>
